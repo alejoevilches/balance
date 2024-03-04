@@ -1,0 +1,21 @@
+section{
+  height:10vh;
+  border: 2px solid red;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+}
+
+button{
+  background-color: white;
+  border:none;
+  padding:15px;
+  border-radius: 20px;
+  font-size: 1em;
+}
+
+button:hover{
+  background-color:red;
+  transition: .4s all;
+}
