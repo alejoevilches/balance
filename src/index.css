@@ -5,10 +5,10 @@
 
 @font-face {
   font-family: "Nunito";
-  src: url(/public/nunito-extralight.ttf);
+  src: url(/public/nunito.ttf);
 }
 
 :root{
   --background-color:#232323;
-  --main-font:"Times New Roman"
+  --main-font:"Nunito"
 }

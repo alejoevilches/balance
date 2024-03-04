@@ -1,7 +1,13 @@
 import { Card } from "./Card"
+import "./Notes.css"
 
 export function Notes(){
   return (
-    <Card />
+    <section className="cardContainer">
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </section>
   )
 }
