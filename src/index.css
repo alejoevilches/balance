@@ -3,6 +3,12 @@
   margin:0
 }
 
+@font-face {
+  font-family: "Nunito";
+  src: url(/public/nunito-extralight.ttf);
+}
+
 :root{
   --background-color:#232323;
+  --main-font:"Times New Roman"
 }

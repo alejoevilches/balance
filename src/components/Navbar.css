@@ -1,6 +1,5 @@
 section{
   height:10vh;
-  border: 2px solid red;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -8,14 +7,16 @@ section{
 }
 
 button{
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border:none;
   padding:15px;
-  border-radius: 20px;
+  border-radius: 20px 10px;
   font-size: 1em;
+  font-weight: 100;
+  line-height: 5px;
+  transition: .4s all;
 }
 
 button:hover{
   background-color:red;
-  transition: .4s all;
 }
