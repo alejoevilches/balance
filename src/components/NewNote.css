@@ -1,0 +1,65 @@
+@import url(/src/index.css);
+
+.input-container h2{
+  color:white;
+}
+
+form{
+  display:flex;
+  flex-direction: column;
+  padding:20px;
+  color:white;
+  justify-content: center;
+  align-items: center;
+}
+
+.stars-container{
+  padding-bottom:10px;
+}
+
+input{
+  margin-bottom:20px;
+}
+
+
+.stars-container label:hover {
+  color:var(--background-color);
+}
+
+.stars-container input.star-input:checked + label {
+  color: var(--background-color)
+}
+
+.star-input {
+  display: none;
+}
+
+.stars-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#tags{
+  width:250px;
+  height:30px;
+}
+
+#note{
+  width:400px;
+  height:100px;
+  padding:10px;
+  font-family: var(--main-font);
+}
+
+.submit{
+  background-color: rgb(255, 255, 255);
+  border:none;
+  margin-top:15px;
+  padding:15px;
+  border-radius: 20px 10px;
+  font-size: 1em;
+  font-weight: 100;
+  line-height: 5px;
+  transition: .4s all;
+}
