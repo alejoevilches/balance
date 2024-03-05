@@ -1,5 +1,7 @@
+import "./AddButton.css"
+
 export function AddButton(){
   return (
-    <button>+</button>
+    <button className="add">+</button>
   )
 }

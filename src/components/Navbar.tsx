@@ -2,9 +2,9 @@ import "./Navbar.css"
 
 export function Navbar(){
   return (
-    <section>
+    <nav>
       <button>Entradas</button>
       <button>Estadisticas</button>
-    </section>
+    </nav>
   )
 }

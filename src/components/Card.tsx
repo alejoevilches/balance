@@ -1,7 +1,7 @@
 import "./Card.css"
 import { type Note } from "../types/types"
 
-export function Card(el: Note){
+export function Card({el}:{el:Note}){
   return (
     <article>
       <div className="card-header">
@@ -19,5 +19,3 @@ export function Card(el: Note){
     </article>
   )
 }
-
-<div className="angry-tag">Enojado</div>

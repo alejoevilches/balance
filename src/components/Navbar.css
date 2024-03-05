@@ -1,4 +1,4 @@
-section{
+nav{
   height:10vh;
   display:flex;
   align-items: center;
@@ -7,7 +7,7 @@ section{
   padding-bottom: 15px;
 }
 
-button{
+nav button{
   background-color: rgb(255, 255, 255);
   border:none;
   padding:15px;
