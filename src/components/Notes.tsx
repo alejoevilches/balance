@@ -1,13 +1,16 @@
 import { Card } from "./Card"
-import "./Notes.css"
+import "./Notes.css";
+import { useNotesStore } from "../store/useNotesStore";
 
 export function Notes(){
+  const {notes}=useNotesStore()
   return (
     <section className="cardContainer">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {notes.map(note=>{
+        return (
+          <Card key={note.date} el={note} />
+        )
+      })}
     </section>
   )
 }
