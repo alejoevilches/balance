@@ -40,12 +40,14 @@ input{
   justify-content: center;
 }
 
-#tags{
+#tags, #title{
   width:250px;
   height:30px;
+  border-radius: 20px;
 }
 
 #note{
+  border-radius: 20px;
   width:400px;
   height:100px;
   padding:10px;
