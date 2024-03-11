@@ -4,24 +4,41 @@ import { useId } from "react";
 import "./NewNote.css"
 import { useNotesStore } from "../store/useNotesStore";
 
-export function NewNote(){
+interface NewNoteProps{
+  handler:()=>void;
+}
+
+export function NewNote({handler}: NewNoteProps){
   const starsRating=[1,2,3,4,5]
   const createId=useId();
   const {addToNotes}=useNotesStore();
 
+  const getDate=()=>{
+    const timestamp=new Date()
+    const year=timestamp.getFullYear()
+    const month=timestamp.getMonth()
+    const day=timestamp.getDate()
+    return `${day}/${month}/${year}`
+    
+  }
+
   const handleSubmit=(e: React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
     const data=new FormData(e.target as HTMLFormElement)
-    const tagsFormDataValue = data.get("tags") as string;
-    const formattedTags=tagsFormDataValue.split(",")
+    const tagsFromDataValue = data.get("tags") as string;
+    console.log(tagsFromDataValue);
+    const formattedTags=tagsFromDataValue.split(",")
+    getDate();
     const note:Note={
       id:createId,
       title:data.get("title") as string,
       tags:formattedTags,
       content:data.get("note") as string,
-      date:Date.now()
+      date:getDate()
     }
-    return addToNotes(note)
+    console.log(note)
+    addToNotes(note)
+    return handler()
   }
 
   return (
@@ -33,7 +50,7 @@ export function NewNote(){
             <div className="stars-container">
             {starsRating.map(n=>{
               return (
-                <div>
+                <div key={n}>
                   <input type="radio" className="star-input" name="rating" id={`star${n}`} value={n} />
                   <label htmlFor={`star${n}`}>★</label>
                 </div>

@@ -12,7 +12,9 @@ export function Card({el}:{el:Note}){
       <section className="tags-container">
         {el.tags.map(tag=>{
           return (
-            <div className={tag} />
+            <div key={tag} className={tag}>
+                {tag}
+            </div>
           )
         })}
       </section>

@@ -1,7 +1,11 @@
 import "./AddButton.css"
 
-export function AddButton(){
+interface AddButtonProps{
+  handler:()=>void;
+}
+
+export function AddButton({handler}:AddButtonProps){
   return (
-    <button className="add">+</button>
+    <button className="add" onClick={handler}>+</button>
   )
 }
