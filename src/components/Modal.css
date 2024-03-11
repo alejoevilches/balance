@@ -30,5 +30,12 @@
 }
 
 .close-button{
-    position: relative;
+    position: absolute;
+    left:92%;
+    bottom:89%;
+    font-size:2em;
+}
+
+.close-button:hover{
+    cursor: pointer;
 }

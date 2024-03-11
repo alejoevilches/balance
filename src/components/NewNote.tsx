@@ -42,7 +42,7 @@ export function NewNote({handler}: NewNoteProps){
   }
 
   return (
-    <Modal>
+    <Modal handler={handler}>
       <section className="input-container">
         <h2>Agregar nueva nota</h2>
         <form onSubmit={handleSubmit}>
