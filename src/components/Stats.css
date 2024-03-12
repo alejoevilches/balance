@@ -1,0 +1,5 @@
+@import url(/src/index.css);
+
+body{
+  background: var(--background-color)
+}
