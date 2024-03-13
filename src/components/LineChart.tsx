@@ -5,8 +5,8 @@ export function LineChart(){
   return (
     <Chart
         type="line"
-        width={350}
-        height={250}
+        width={500}
+        height={350}
         datasetIdKey='id'
         options={{
           responsive:false,
@@ -15,7 +15,7 @@ export function LineChart(){
           scales:{
             x:{
               type:"category",
-              labels:["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"]
+              labels:["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"],
             },
             y:{
               display:false,
@@ -23,7 +23,7 @@ export function LineChart(){
           },
           plugins:{
             title:{
-              text:"Tu estado de animo los ultimos 7 dias",
+              text:"Tu estado de animo según las ultimas 7 notas",
               display:true,
               font:{
                 family:"Nunito",

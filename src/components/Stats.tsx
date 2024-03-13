@@ -1,13 +1,17 @@
 import { Navbar } from "./Navbar";
-import "../index.css"
+import "./Stats.css"
 import { LineChart } from "./LineChart";
+import { PieChart } from "./PieChart";
 
 export function Stats() {
 
   return (
     <>
       <Navbar />
-      <LineChart />
+      <div className="charts-container">
+        <LineChart />
+        <PieChart />
+      </div>
     </>
   );
 }

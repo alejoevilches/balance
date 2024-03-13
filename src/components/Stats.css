@@ -3,3 +3,11 @@
 body{
   background: var(--background-color)
 }
+
+.charts-container{
+  display:flex;
+  height:80vh;
+  align-items: center;
+  justify-content: center;
+  gap:30px;
+}
