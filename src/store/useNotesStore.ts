@@ -16,7 +16,8 @@ export const useNotesStore=create<NotesState>((set)=>({
 
   addToNotes:(el:Note)=>set((state)=>{
     const {notes}=state;
-    const newNotes=[...notes,el]
+    const newNotes=[el,...notes]
+    localStorage.setItem("notes", JSON.stringify(newNotes))
     return {notes:newNotes}
   })
 

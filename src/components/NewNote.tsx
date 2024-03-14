@@ -28,9 +28,12 @@ export function NewNote({handler}: NewNoteProps){
     const tagsFromDataValue = data.get("tags") as string;
     console.log(tagsFromDataValue);
     const formattedTags=tagsFromDataValue.split(",")
+    const noteRating=data.get("rating")
+    const rating: number = noteRating !== null ? +noteRating : 0;
     getDate();
     const note:Note={
       id:createId,
+      rating:rating,
       title:data.get("title") as string,
       tags:formattedTags,
       content:data.get("note") as string,

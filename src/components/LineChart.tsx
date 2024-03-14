@@ -1,7 +1,19 @@
 import { Chart } from "react-chartjs-2"
 import 'chart.js/auto'
+import { useNotesStore } from "../store/useNotesStore"
 
 export function LineChart(){
+  const {notes}=useNotesStore();
+
+  const getData=()=>{
+    const selectedNotes=notes.slice(0,7)
+    const rankingNotes=selectedNotes.map(n=>n.rating)
+    const noteLabels=selectedNotes.map(n=>n.date)
+    return {rankingNotes, noteLabels}
+  }
+
+  const {rankingNotes, noteLabels}=getData()
+
   return (
     <Chart
         type="line"
@@ -15,7 +27,7 @@ export function LineChart(){
           scales:{
             x:{
               type:"category",
-              labels:["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"],
+              labels:noteLabels,
             },
             y:{
               display:false,
@@ -40,7 +52,7 @@ export function LineChart(){
           datasets: [
             {
               label: '',
-              data: [3, 2, 4, 5, 2, 1, 5],
+              data: rankingNotes,
             },
           ],
         }}
