@@ -8,7 +8,7 @@ export function Notes(){
     <section className="cardContainer">
       {notes.map(note=>{
         return (
-          <Card key={note.id} el={note} />
+          <Card key={note.id} el={note}/>
         )
       })}
     </section>

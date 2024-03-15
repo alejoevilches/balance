@@ -1,7 +1,11 @@
 import "./Card.css"
 import { type Note } from "../types/types"
 
-export function Card({el}:{el:Note}){
+interface CardProps{
+  el:Note,
+}
+
+export function Card({el}:CardProps){
   return (
     <article>
       <div className="card-header">
