@@ -1,14 +1,25 @@
-import { useNotesStore } from "../store/useNotesStore"
-import { Note } from "../types/types"
-import "./Details.css"
+import { Note } from "../types/types";
 
-export function Details(note:Note){
-  const {notes}=useNotesStore()
+interface DetailsProp{
+  el:Note
+}
+
+export function Details({el}:DetailsProp){
   return (
-    <section className="details-card">
-      <div className="details-card-header">
-
-      </div>
-    </section>
+    <article className="details-container">
+      <section className="details-header">
+        <h2>{el.title}</h2>
+        <h3>{el.date}</h3>
+      </section>
+      <section className="details-main">
+        <p>{el.content}</p>
+        <div className="details-tags">
+          {el.tags.map(tag=>{
+            return ( <div key={tag} className="tag"></div> )
+          })}
+        </div>
+        <button>Aceptar</button>
+      </section>
+    </article>
   )
 }
