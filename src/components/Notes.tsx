@@ -38,7 +38,7 @@ export function Notes(){
       })}
       {state.modal && state.selectedNote &&
         <Modal handler={handleModal}>
-          <Details el={state.selectedNote} />
+          <Details el={state.selectedNote} onClick={handleModal} />
         </Modal>
       }
     </section>

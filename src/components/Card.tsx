@@ -15,7 +15,7 @@ export function Card({el, onClick}:CardProps){
     }
   };
   return (
-    <article onClick={handleClick}>
+    <article className="card-container" onClick={handleClick}>
       <div className="card-header">
         <h3>{el.title}</h3>
         <p>{el.date}</p>
@@ -24,7 +24,7 @@ export function Card({el, onClick}:CardProps){
       <section className="tags-container">
         {el.tags.map(tag=>{
           return (
-            <div key={tag}>
+            <div key={tag} className="tag">
                 {tag}
             </div>
           )

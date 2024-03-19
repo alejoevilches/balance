@@ -1,10 +1,12 @@
 import { Note } from "../types/types";
+import "./Details.css";
 
 interface DetailsProp{
   el:Note
+  onClick:()=>void
 }
 
-export function Details({el}:DetailsProp){
+export function Details({el, onClick}:DetailsProp){
   return (
     <article className="details-container">
       <section className="details-header">
@@ -15,11 +17,11 @@ export function Details({el}:DetailsProp){
         <p>{el.content}</p>
         <div className="details-tags">
           {el.tags.map(tag=>{
-            return ( <div key={tag} className="tag"></div> )
+            return ( <div key={tag} className="tag">{tag}</div> )
           })}
         </div>
-        <button>Aceptar</button>
       </section>
+        <button onClick={onClick}>Aceptar</button>
     </article>
   )
 }

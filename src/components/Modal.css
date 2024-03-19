@@ -21,7 +21,7 @@
     align-items: center;
     text-align: center;
     width:max-content;
-    min-height: 320px;
+    min-height: 340px;
     height:max-content;
     background-color: #4c4c4c;
     position:relative;
@@ -33,8 +33,9 @@
 .close-button{
     position: absolute;
     left:92%;
-    bottom:86%;
+    bottom:88%;
     font-size:2em;
+    color:white;
 }
 
 .close-button:hover{
