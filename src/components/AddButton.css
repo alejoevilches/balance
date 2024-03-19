@@ -1,5 +1,6 @@
 .add{
   position:absolute;
+  background-color:#A6A6A6;
   left:93%;
   top:90%;
   border:none;
@@ -7,4 +8,9 @@
   height:50px;
   border-radius: 100%;
   font-size: 2em;
+  transition: .4s all;
+}
+
+.add:hover{
+  background-color: #E8E8E8;;
 }
