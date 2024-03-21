@@ -1,6 +1,6 @@
 import { Note } from "../types/types";
 import { Modal } from "./Modal";
-import { useId } from "react";
+import { v4 as uuidv4 } from 'uuid';
 import "./NewNote.css"
 import { useNotesStore } from "../store/useNotesStore";
 
@@ -10,9 +10,7 @@ interface NewNoteProps{
 
 export function NewNote({handler}: NewNoteProps){
   const starsRating=[1,2,3,4,5]
-  const createId=useId();
   const {addToNotes}=useNotesStore();
-
   const getDate=()=>{
     const timestamp=new Date()
     const year=timestamp.getFullYear()
@@ -26,18 +24,20 @@ export function NewNote({handler}: NewNoteProps){
     e.preventDefault();
     const data=new FormData(e.target as HTMLFormElement)
     const tagsFromDataValue = data.get("tags") as string;
-    console.log(tagsFromDataValue);
-    const formattedTags=tagsFromDataValue.split(",")
+    const formattedTags = tagsFromDataValue ? tagsFromDataValue.split(",") : [];
     const noteRating=data.get("rating")
     const rating: number = noteRating !== null ? +noteRating : 0;
     getDate();
     const note:Note={
-      id:createId,
+      id:uuidv4(),
       rating:rating,
       title:data.get("title") as string,
       tags:formattedTags,
       content:data.get("note") as string,
       date:getDate()
+    }
+    if (note.rating===0 || note.title==="" || note.content==="" || note.tags.length === 0){
+      return alert("Todos los campos son obligatorios. De esta forma, Balance puede hacer un mejor seguimiento de tu estado de animo")
     }
     console.log(note)
     addToNotes(note)
