@@ -1,5 +1,6 @@
 .details-container{
   width:30vw;
+  min-width:400px;
   display:flex;
   flex-direction: column;
   color:#E8E8E8
@@ -20,7 +21,8 @@
 
 .details-main p{
   text-align: justify;
-  width:18vw;
+  width:max-content;
+  padding-right: 10px;;
   font-size:1.1em;
 }
 
@@ -39,12 +41,23 @@
   font-size: 1em;
   font-weight: 100;
   line-height: 5px;
-  width:10vw;
-  transition: .4s all;
+  width:100px;
+  transition: .4s background-color;
   margin:0 auto;
 }
 
 .details-container button:hover{
   cursor: pointer;
   background-color:#E8E8E8
+}
+
+@media screen and (max-width:1140px) {
+
+  .details-header h2{
+    font-size:1.2em;
+  }
+
+  .details-header h3{
+    font-size:1em;
+  }
 }
