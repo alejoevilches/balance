@@ -17,7 +17,7 @@ interface NotesState{
 export function Notes(){
   const {notes}=useNotesStore()
   const [state, setState] = useState<NotesState>({
-    notesPerPage:5,
+    notesPerPage:9,
     selectedNote: null,
     modal: false,
     currentPage:1
