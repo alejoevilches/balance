@@ -22,9 +22,9 @@ export function Pagination({ currentPage, totalPages, setCurrentPage }: Paginati
 
   return (
     <section className="pagination">
-      <button onClick={lastPage}>-</button>
+      <button className="pagination-button" onClick={lastPage}>-</button>
       <h3>{currentPage}</h3>
-      <button onClick={nextPage}>+</button>
+      <button className="pagination-button" onClick={nextPage}>+</button>
     </section>
   );
 }
