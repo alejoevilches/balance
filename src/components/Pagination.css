@@ -20,6 +20,7 @@
 
 @media screen and (max-width:1140px) {
   .pagination{
+    position:fixed;
     left:42%;
     display: flex;
     justify-content: center;
@@ -33,4 +34,10 @@
     border-radius: 20px;
     cursor: pointer;
   }  
+}
+
+@media screen and (max-width:720px) {
+  .pagination{
+    left:26%;
+  }
 }
