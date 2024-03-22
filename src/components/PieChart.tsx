@@ -29,7 +29,7 @@ const data = selectedTags.map(tag => count[tag] || 0);
   return (
     <Chart 
       type="pie"
-      width={500}
+      width={450}
       height={350}
       data={{
         labels:selectedTags,

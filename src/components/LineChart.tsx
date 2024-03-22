@@ -17,7 +17,7 @@ export function LineChart(){
   return (
     <Chart
         type="line"
-        width={500}
+        width={450}
         height={350}
         datasetIdKey='id'
         options={{
