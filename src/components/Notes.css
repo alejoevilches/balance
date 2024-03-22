@@ -1,8 +1,9 @@
 .cardContainer{
+  margin-top:50px;
   padding:0px 70px;
   display:flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap:10px;
 }
