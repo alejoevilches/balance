@@ -48,7 +48,8 @@ input{
 
 #note{
   border-radius: 20px;
-  width:400px;
+  width:40vw;
+  max-width: 500px;
   height:100px;
   padding:10px;
   font-family: var(--main-font);
@@ -64,4 +65,10 @@ input{
   font-weight: 100;
   line-height: 5px;
   transition: .4s all;
+}
+
+@media screen and (max-width:720px) {
+  .input-container{
+    width:60vw;
+  }
 }
