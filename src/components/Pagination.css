@@ -17,3 +17,20 @@
   font-size: 2em;
   transition: .4s all;
 }
+
+@media screen and (max-width:1140px) {
+  .pagination{
+    left:42%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 12px;
+    gap: 8px;
+    height: 40px;
+    width: 201px;
+    border: none;
+    background: #4F4F4F;
+    border-radius: 20px;
+    cursor: pointer;
+  }  
+}

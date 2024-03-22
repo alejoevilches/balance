@@ -7,3 +7,9 @@
   flex-wrap: wrap;
   gap:10px;
 }
+
+@media screen and (max-width:1150px) {
+  .cardContainer{
+    margin-top:0px;
+  }  
+}
