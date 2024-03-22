@@ -26,3 +26,9 @@
     left:88%;
   }  
 }
+
+@media screen and (max-width:414px) {
+  .add{
+    left:85%;
+  }
+}

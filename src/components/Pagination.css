@@ -41,3 +41,9 @@
     left:26%;
   }
 }
+
+@media screen and (max-width:414px) {
+  .pagination{
+    left:22%;
+  }
+}
