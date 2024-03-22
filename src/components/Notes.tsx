@@ -56,7 +56,7 @@ export function Notes(){
           )
         })}
       </section>
-      <Pagination setCurrentPage={handlePages} currentPage={state.currentPage} totalPages={totalPages} />
+      {notes.length>9 && <Pagination setCurrentPage={handlePages} currentPage={state.currentPage} totalPages={totalPages} /> }
       {state.modal && state.selectedNote &&
         <Modal handler={handleModal}>
           <Details el={state.selectedNote} onClick={handleModal} />
