@@ -18,7 +18,7 @@ export function Card({el, onClick}:CardProps){
     <article className="card-container" onClick={handleClick}>
       <div className="card-header">
         <h3>{el.title}</h3>
-        <p>{el.date}</p>
+        <h5>{el.date}</h5>
       </div>
       <p className="note-data">{el.content}</p>
       <section className="tags-container">

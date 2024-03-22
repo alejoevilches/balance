@@ -1,30 +1,30 @@
 import "./Pagination.css"
 
 interface PaginationProps{
-  setCurrentPage:(page:number)=>void,
-  currentPage:number,
-  totalPages:number
+  currentPage: number;
+  totalPages: number;
+  setCurrentPage: (page: number) => void;
 }
 
-export function Pagination({setCurrentPage, currentPage, totalPages}: PaginationProps){
+export function Pagination({ currentPage, totalPages, setCurrentPage }: PaginationProps){
 
-  const nextPage=()=>{
-    if (currentPage !== totalPages){
-      setCurrentPage(currentPage+1)
+  const nextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
     }
-  }
+  };
 
-  const lastPage=()=>{
-    if (currentPage !== 1){
-      setCurrentPage(currentPage-1)
+  const lastPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
     }
-  }
+  };
 
   return (
     <section className="pagination">
-      <button onClick={nextPage}>+</button>
-      <h3>{currentPage}</h3>
       <button onClick={lastPage}>-</button>
+      <h3>{currentPage}</h3>
+      <button onClick={nextPage}>+</button>
     </section>
-  )
+  );
 }
