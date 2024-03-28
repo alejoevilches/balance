@@ -1,11 +1,25 @@
-import "./Navbar.css"
-import { Link } from "react-router-dom"
+import { NavLink } from 'react-router-dom'
+import './Navbar.css'
 
 export function Navbar(){
   return (
     <nav className="navbar">
-      <Link to="/"><button className="navbar-button">Entradas</button></Link>
-      <Link to={"/stats"}><button className="navbar-button">Estadisticas</button></Link>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+        isActive ? 'active' : ''
+        }
+      >
+        <button className="navbar-button">Entradas</button>
+      </NavLink>
+      <NavLink
+        to={'/stats'}
+        className={({ isActive }) =>
+          isActive ? 'active' : ''
+        }
+      >
+        <button className="navbar-button">Estadisticas</button>
+      </NavLink>
     </nav>
   )
 }
