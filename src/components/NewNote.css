@@ -19,6 +19,7 @@ form{
 
 input{
   margin-bottom:20px;
+  padding-inline: 16px;
 }
 
 
@@ -51,7 +52,7 @@ input{
   width:40vw;
   max-width: 500px;
   height:100px;
-  padding:10px;
+  padding:10px 20px;
   font-family: var(--main-font);
 }
 
