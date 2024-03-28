@@ -32,10 +32,11 @@
 
 .close-button{
     position: absolute;
-    left:92%;
-    bottom:88%;
+    right:20px;
+    top:5px;
     font-size:2em;
     color:white;
+    font-weight: 600;
 }
 
 .close-button:hover{
